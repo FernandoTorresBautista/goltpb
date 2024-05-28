@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "fe969f7c-395d-4b50-a8dc-7653c16eb411",
+		"name": "goltpb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9765168"
+	},
+	"item": [
+		{
+			"name": "get ltpb info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api/v1/ltp",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ltp"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

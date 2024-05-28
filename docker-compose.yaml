@@ -1,0 +1,15 @@
+version: '3'
+services:
+  # Go App
+  go-app:
+    image: goltpb:latest
+    ports:
+      - "8080:8080"  # Adjust the port as needed
+    environment:
+      APP_NAME: goltpb
+      PORT: 8080
+    networks:
+      - app-network
+
+networks:
+  app-network:

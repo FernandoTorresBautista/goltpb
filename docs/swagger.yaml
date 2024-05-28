@@ -1,0 +1,54 @@
+basePath: /
+definitions:
+  v1.OutputResponse:
+    properties:
+      ltp:
+        items:
+          properties:
+            amount:
+              type: string
+            pair:
+              type: string
+          type: object
+        type: array
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: soberkoder@swagger.io
+    name: API Support
+  description: go api for a contacts CRUD
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: goltpb api
+  version: "1.0"
+paths:
+  /api/v1/ltp:
+    get:
+      description: 'GetInfo return the Last Traded Price of Bitcoin for the following
+        currency pairs: BTC/USD, BTC/CHF, BTC/EUR'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: return the list of pairs
+          schema:
+            $ref: '#/definitions/v1.OutputResponse'
+        "400":
+          description: return the error of the bad request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: return the error of the failure in the API
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: GetInfo
+      tags:
+      - LTPB
+swagger: "2.0"

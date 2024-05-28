@@ -1,0 +1,80 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "go api for a contacts CRUD",
+        "title": "goltpb api",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "email": "soberkoder@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/api/v1/ltp": {
+            "get": {
+                "description": "GetInfo return the Last Traded Price of Bitcoin for the following currency pairs: BTC/USD, BTC/CHF, BTC/EUR",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "LTPB"
+                ],
+                "summary": "GetInfo",
+                "responses": {
+                    "200": {
+                        "description": "return the list of pairs",
+                        "schema": {
+                            "$ref": "#/definitions/v1.OutputResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "return the error of the bad request",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "return the error of the failure in the API",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "v1.OutputResponse": {
+            "type": "object",
+            "properties": {
+                "ltp": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amount": {
+                                "type": "string"
+                            },
+                            "pair": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
