@@ -14,7 +14,7 @@
         },
         "version": "1.0"
     },
-    "host": "https://goltpb.onrender.com",
+    "host": "goltpb.onrender.com",
     "basePath": "/",
     "paths": {
         "/api/v1/ltp": {

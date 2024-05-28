@@ -71,7 +71,7 @@ func StartApp(logger *log.Logger, cfg *config.Configuration) {
 // @contact.email soberkoder@swagger.io
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-// @host https://goltpb.onrender.com
+// @host goltpb.onrender.com
 // @BasePath /
 func main() {
 	if cfg.Fail {

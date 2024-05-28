@@ -12,7 +12,7 @@ definitions:
           type: object
         type: array
     type: object
-host: https://goltpb.onrender.com
+host: goltpb.onrender.com
 info:
   contact:
     email: soberkoder@swagger.io
